@@ -1,0 +1,57 @@
+// Header
+.nav {
+  justify-content: space-between;
+  padding: 15px 0;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
+
+    .logo {
+      img {
+        width: 100px;
+      }
+     
+    }
+  }
+}
+
+.about-school {
+  background-image: url(/img/header/header-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin-bottom: 130px;
+
+  &__title {
+      margin-bottom: 42px;
+  }
+
+  &__subtitle {
+      margin-bottom: 71px;
+
+    @media screen and (max-width: 768px){
+      margin-bottom: 70px;
+    }
+  }
+
+  .icon-slide-down {
+      position: absolute;
+      transform: translate(-50%, 0);
+      left: 50%;
+      bottom: 10px;
+  }
+}
+
+.social-img {
+  margin-right: 4px;
+  padding-top: 2px;
+  border-radius: 2px;
+}
+
+.tel-number {
+  margin-right: 7px;
+}
