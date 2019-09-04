@@ -126,7 +126,8 @@
             transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0; } }
 
-#page-listner {
+#page-listner,
+#comments-controls {
   position: absolute;
   display: none;
   left: 50%;
@@ -137,11 +138,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  #page-listner .current-slide {
-    margin: 0 7px;
-    font-size: 20px;
+  @media screen and (max-width: 768px) {
+    #page-listner,
+    #comments-controls {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      #page-listner .prev img,
+      #page-listner .next img,
+      #comments-controls .prev img,
+      #comments-controls .next img {
+        width: 27px;
+        height: 18px; } }
+  #page-listner .current-slide,
+  #comments-controls .current-slide {
+    margin: 0 25px;
     line-height: 27px;
+    font-size: 20px;
     font-weight: 600; }
+
+#comments-controls {
+  bottom: 0; }
 
 .benefit {
   display: -webkit-box;
@@ -180,7 +197,11 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      position: relative; }
+      .individual-work .btn {
+        position: absolute;
+        bottom: 20px; } }
   .individual-work__context {
     width: 35%;
     margin: 0 auto;
@@ -195,10 +216,7 @@
         text-align: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-        .individual-work__context .btn {
-          position: relative;
-          bottom: -250px; } }
+                align-items: center; } }
   .individual-work__video {
     width: 55%;
     padding: 15px; }
@@ -208,9 +226,7 @@
       position: relative; }
     @media screen and (max-width: 768px) {
       .individual-work__video {
-        width: auto;
-        position: relative;
-        top: -25px; } }
+        width: auto; } }
 
 .direction {
   margin-bottom: 80px; }
@@ -270,7 +286,11 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
           -ms-flex-direction: column-reverse;
-              flex-direction: column-reverse; } }
+              flex-direction: column-reverse;
+      position: relative; }
+      .course-programm .btn {
+        position: absolute;
+        bottom: 20px; } }
   .course-programm__context-title {
     margin-left: -20px;
     margin-bottom: 20px; }
@@ -286,10 +306,7 @@
         text-align: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-        .course-programm__context .btn {
-          position: relative;
-          bottom: -250px; } }
+                align-items: center; } }
   .course-programm__list {
     margin-bottom: 15px; }
     .course-programm__list span {
@@ -316,11 +333,7 @@
       position: relative; }
     @media screen and (max-width: 768px) {
       .course-programm__video {
-        width: auto;
-        position: relative;
-        top: -25px; } }
-  .course-programm__context-btn {
-    margin-left: -20px; }
+        width: auto; } }
 
 .foto-instagram__title {
   margin-bottom: 50px; }
@@ -361,7 +374,11 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      position: relative; }
+      .online-lesson .btn {
+        position: absolute;
+        bottom: 20px; } }
   .online-lesson__context {
     width: 35%;
     margin: 0 auto;
@@ -376,21 +393,15 @@
         text-align: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-        .online-lesson__context .btn {
-          position: relative;
-          bottom: -250px; } }
+                align-items: center; } }
   .online-lesson__img {
     width: 55%;
     padding: 15px; }
     .online-lesson__img img {
-      width: 100%;
-      position: relative; }
+      width: 100%; }
     @media screen and (max-width: 768px) {
       .online-lesson__img {
-        width: auto;
-        position: relative;
-        top: -25px; } }
+        width: auto; } }
 
 .comments {
   position: relative;
@@ -424,6 +435,85 @@
     overflow: hidden;
     margin-bottom: 20px; }
 
+.price {
+  padding: 115px 0; }
+  .price .subtitle {
+    margin-bottom: 70px; }
+  .price h2 {
+    margin-bottom: 20px; }
+  .price .month-number {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      .price .month-number {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+
+.abonements div:not(:last-child) {
+  margin-right: 25px; }
+  @media screen and (max-width: 1200px) {
+    .abonements div:not(:last-child) {
+      margin: 10px; } }
+
+.abonements__card {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 25px;
+  font-family: Roboto; }
+  @media screen and (max-width: 1200px) {
+    .abonements__card {
+      margin: 10px;
+      width: 25%; } }
+  @media screen and (max-width: 765px) {
+    .abonements__card {
+      margin: 10px;
+      width: auto; } }
+
+.abonements__card-month {
+  margin-bottom: 33px; }
+
+.abonements__card-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 20px; }
+
+.abonements__card-subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px; }
+
+.abonements__card-dance-type {
+  font-size: 14px;
+  margin-bottom: 25px; }
+  .abonements__card-dance-type li:not(:last-child) {
+    margin-bottom: 10px; }
+
+.abonements__card-price {
+  font-size: 28px;
+  font-weight: bold; }
+
+.abonements__card-bonus {
+  color: #F87A7A;
+  font-size: 12px;
+  margin-bottom: 15px; }
+
+@media screen and (max-width: 1200px) {
+  .abonements {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+@media screen and (max-width: 768px) {
+  .abonements .abonements__card-month,
+  .abonements .abonements__card-dance-type {
+    display: none; } }
+
 .master-class {
   padding: 120px 0;
   -ms-flex-wrap: wrap;
@@ -434,7 +524,11 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
           -ms-flex-direction: column-reverse;
-              flex-direction: column-reverse; } }
+              flex-direction: column-reverse;
+      position: relative; }
+      .master-class .btn {
+        position: absolute;
+        bottom: 20px; } }
   .master-class__context {
     width: 35%;
     margin: 0 auto;
@@ -449,10 +543,7 @@
         text-align: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-        .master-class__context .btn {
-          position: relative;
-          bottom: -230px; } }
+                align-items: center; } }
   .master-class__img {
     width: 55%;
     padding: 15px; }
@@ -489,10 +580,30 @@
     .addres-info .contacts h2 {
       margin-bottom: 15px; }
     .addres-info .contacts__info {
-      position: relative;
       padding-left: 30px; }
       .addres-info .contacts__info li {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        position: relative; }
+    .addres-info .contacts__info-addres ::before {
+      content: url(/img/contact-icon/geo.svg);
+      position: absolute;
+      top: 7px;
+      left: -30px; }
+    .addres-info .contacts__info-work-time ::before {
+      content: url(/img/contact-icon/clock.svg);
+      position: absolute;
+      top: 7px;
+      left: -30px; }
+    .addres-info .contacts__info-call-number ::before {
+      content: url(/img/contact-icon/phone-call.svg);
+      position: absolute;
+      top: 7px;
+      left: -30px; }
+    .addres-info .contacts__info-e-mail ::before {
+      content: url(/img/contact-icon/mail.svg);
+      position: absolute;
+      top: 0;
+      left: -30px; }
 
 .form-connection {
   margin-bottom: 80px;
@@ -758,6 +869,11 @@ p {
 li {
   list-style: none; }
 
+a {
+  color: #57F1D8; }
+  a:hover, a:active, a:link, a:visited {
+    color: #57F1D8; }
+
 .container {
   width: 1410px;
   max-width: 100%;
@@ -803,66 +919,3 @@ input, textarea {
     input, textarea {
       font-size: 14px;
       line-height: 150%; } }
-
-.price {
-  padding: 115px 0; }
-  .price .subtitle {
-    margin-bottom: 70px; }
-  .price h2 {
-    margin-bottom: 20px; }
-
-.abonements div:not(:last-child) {
-  margin-right: 25px; }
-  @media screen and (max-width: 1200px) {
-    .abonements div:not(:last-child) {
-      margin: 10px; } }
-
-.abonements__card {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  padding: 25px;
-  font-family: Roboto; }
-  @media screen and (max-width: 1200px) {
-    .abonements__card {
-      margin: 10px;
-      width: 25%; } }
-
-.abonements__card-month {
-  margin-bottom: 33px; }
-
-.abonements__card-title {
-  font-weight: 500;
-  font-size: 20px;
-  color: #000000;
-  margin-bottom: 20px; }
-
-.abonements__card-subtitle {
-  font-weight: normal;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px; }
-
-.abonements__card-dance-type {
-  font-size: 14px;
-  margin-bottom: 25px; }
-  .abonements__card-dance-type li:not(:last-child) {
-    margin-bottom: 10px; }
-
-.abonements__card-price {
-  font-size: 28px;
-  font-weight: bold; }
-
-.abonements__card-bonus {
-  color: #F87A7A;
-  font-size: 12px;
-  margin-bottom: 15px; }
-
-@media screen and (max-width: 1200px) {
-  .abonements {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }

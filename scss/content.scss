@@ -40,6 +40,12 @@ p {
   @media screen and (max-width: 768px){
     padding: 70px 0;
     flex-direction: column;
+    position: relative;
+
+      .btn {
+        position: absolute;
+        bottom: 20px;
+      }
   }
 
   &__context {
@@ -55,11 +61,6 @@ p {
       width: 100%;
       text-align: center;
       align-items: center;
-
-      .btn {
-        position: relative;
-        bottom: -250px;
-      }
     }
   }
 
@@ -75,8 +76,6 @@ p {
 
     @media screen and (max-width: 768px){
       width: auto;
-      position: relative;
-      top: -25px;
     }
   }
 }
@@ -150,6 +149,12 @@ p {
   @media screen and (max-width: 768px){
     padding: 70px 0;
     flex-direction: column-reverse;
+    position: relative;
+
+    .btn {
+      position: absolute;
+      bottom: 20px;
+    }
   }
 
   &__context-title{
@@ -166,11 +171,6 @@ p {
       width: 100%;
       text-align: center;
       align-items: center;
-
-      .btn {
-        position: relative;
-        bottom: -250px;
-      }
     }
   }
 
@@ -211,13 +211,7 @@ p {
 
     @media screen and (max-width: 768px){
       width: auto;
-      position: relative;
-      top: -25px;
     }
-  }
-
-  &__context-btn {
-    margin-left: -20px;
   }
 }
 
@@ -269,6 +263,12 @@ p {
   @media screen and (max-width: 768px){
     padding: 70px 0;
     flex-direction: column;
+    position: relative;
+
+    .btn {
+      position: absolute;
+      bottom: 20px;
+    }
   }
 
   &__context {
@@ -284,11 +284,6 @@ p {
       width: 100%;
       text-align: center;
       align-items: center;
-
-      .btn {
-        position: relative;
-        bottom: -250px;
-      }
     }
   }
 
@@ -298,13 +293,10 @@ p {
 
     img {
       width: 100%;
-      position: relative;
     }
 
     @media screen and (max-width: 768px){
       width: auto;
-      position: relative;
-      top: -25px;
     }
   }
 }
@@ -359,6 +351,104 @@ p {
 }
 
 // Price/abonements
+.price {
+  padding: 115px 0;
+
+  .subtitle {
+    margin-bottom: 70px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .month-number {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+}
+
+.abonements {
+
+  div:not(:last-child){
+    margin-right: 25px;
+
+    @media screen and (max-width: 1200px) {
+      margin: 10px
+    }
+  }
+  
+  &__card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 25px;
+    font-family: Roboto;
+
+    @media screen and (max-width: 1200px) {
+      margin: 10px;
+      width: 25%;
+    }
+
+    @media screen and (max-width: 765px) {
+      margin: 10px;
+      width: auto;
+    }
+  }
+
+  &__card-month {
+    margin-bottom: 33px;
+  }
+
+  &__card-title{
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  &__card-subtitle{
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+
+  &__card-dance-type{
+    font-size: 14px;
+    margin-bottom: 25px;
+    
+      li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+  }
+
+  &__card-price{
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__card-bonus{
+    color: #F87A7A;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .abonements__card-month,
+    .abonements__card-dance-type {
+      display: none;
+    }
+  }
+}
 
 
 // master class
@@ -369,6 +459,12 @@ p {
   @media screen and (max-width: 768px){
     padding: 50px 0;
     flex-direction: column-reverse;
+    position: relative;
+
+    .btn {
+      position: absolute;
+      bottom: 20px;
+    }
   }
 
   &__context {
@@ -384,11 +480,6 @@ p {
       width: 100%;
       text-align: center;
       align-items: center;
-
-      .btn {
-        position: relative;
-        bottom: -230px;
-      }
     }
   }
 
@@ -435,11 +526,47 @@ p {
     }
 
     &__info {
-      position: relative;
       padding-left: 30px;
 
       li {
         margin-bottom: 20px;
+        position: relative;
+      }
+    }
+
+    &__info-addres {
+      ::before {
+        content: url(/img/contact-icon/geo.svg);
+        position: absolute;
+        top: 7px;
+        left: -30px;
+      }
+    }
+
+    &__info-work-time {
+      ::before {
+        content: url(/img/contact-icon/clock.svg);
+        position: absolute;
+        top: 7px;
+        left: -30px;
+      }
+    }
+
+    &__info-call-number {
+      ::before {
+        content: url(/img/contact-icon/phone-call.svg);
+        position: absolute;
+        top: 7px;
+        left: -30px;
+      }
+    }
+
+    &__info-e-mail {
+      ::before {
+        content: url(/img/contact-icon/mail.svg);
+        position: absolute;
+        top: 0;
+        left: -30px;
       }
     }
   }

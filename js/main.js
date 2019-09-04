@@ -12,41 +12,39 @@ $(document).ready(function(){
   slider.on('afterChange', function(event, slick, currentSlide){
     $("#cp").text(currentSlide + 1);
  });
+
+  const windowWidth = $(window).width();
+  if(windowWidth < 768){
+    //  sliders
+    let sliderBenefits = $('.benefit');
+    let sliderDirection = $('.direction__content');
+
+    // controllers
+    let prev = $('.prev');
+    let next = $('.next');
+    
+    //  slick elements
+      sliderBenefits.slick({
+        prevArrow: prev,
+        nextArrow: next,
+      });
+      
+      sliderBenefits.on('afterChange', function(event, slick, currentSlide){
+        $("#benefitsCs").text(currentSlide + 1);
+      });
+
+      sliderDirection.slick({
+        prevArrow: prev,
+        nextArrow: next,
+      });
+
+      sliderDirection.on('afterChange', function(event, slick, currentSlide){
+          $("#directionCs").text(currentSlide + 1);
+      });
+   }
 });
 
-const windowWidth = $(window).width();
-if(windowWidth < 768){
-   //  sliders
-   let sliderDirection = $('.direction__content');
-   let sliderBenefits = $('.benefit');
 
-   // controllers
-   let pageListner = $('#page-listner');
-   let prev = $('.prev');
-   let next = $('.next');
-
-   // Css styles
-   pageListner.css("display", "flex");
-   pageListner.show();
-   
-     sliderDirection.slick({
-       prevArrow: prev,
-       nextArrow: next,
-     });
-     
-     sliderDirection.on('afterChange', function(event, slick, currentSlide){
-       $("#cp").text(currentSlide + 1);
-   });
-
-     sliderBenefits.slick({
-       prevArrow: prev,
-       nextArrow: next,
-     });
-
-     sliderBenefits.on('afterChange', function(event, slick, currentSlide){
-       $("#cp").text(currentSlide + 1);
-   });
-}
 
 
 // google map
