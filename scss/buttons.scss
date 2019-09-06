@@ -122,7 +122,11 @@
   }
 }
 
-// slider controller 
+// slider controller
+#page-listner {
+  display: none;
+}
+
 #page-listner,
 #comments-controls {
   position: absolute;
@@ -153,7 +157,8 @@
 }
 
 #comments-controls {
-  bottom: 0;
+  display: flex;
+  bottom: -10px;
 }
 
 

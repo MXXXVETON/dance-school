@@ -26,6 +26,14 @@
     font-size: 14px;
 }
 
+.container {
+    width: 1410px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 h1, .h1 {
     font-family: Blacker-Display, 'Open Sans';
     font-size: 64px;
@@ -82,12 +90,6 @@ a {
   &:visited {
     color: #57F1D8;
   }
-}
-
-.container {
-    width: 1410px;
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 // Google map

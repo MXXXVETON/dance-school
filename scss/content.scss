@@ -11,7 +11,7 @@ p {
     margin-top: 20px;
 }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
 
@@ -75,6 +75,8 @@ p {
     }
 
     @media screen and (max-width: 768px){
+      height: 380px;
+      position: relative;
       width: auto;
     }
   }
@@ -126,6 +128,10 @@ p {
     img {
       width: 100%;
     }
+  }
+
+  .direction-controllers {
+    bottom: auto;
   }
 
     @media screen and (max-width: 1100px) {
@@ -210,6 +216,7 @@ p {
     }
 
     @media screen and (max-width: 768px){
+      height: 370px;
       width: auto;
     }
   }
@@ -310,7 +317,7 @@ p {
     margin: 0 10px;
   }
 
-  .page-listner {
+  .comments-controls {
     position: absolute;
     left: 50%;
     bottom: -20px;
@@ -602,6 +609,7 @@ p {
 
        input {
          width: 48%;
+         max-width: 550px;
        }
 
        @media screen and (max-width: 768px) {
@@ -679,17 +687,17 @@ p {
 }
 
 
-//  мусорка
-subtitle mb30 
-.month-bar {
-    justify-content: space-around;
-    display: none;
+// //  мусорка
+// subtitle mb30 
+// .month-bar {
+//     justify-content: space-around;
+//     display: none;
 
-    @media screen and (max-width: 768px) {
-        display: flex;
-    }
+//     @media screen and (max-width: 768px) {
+//         display: flex;
+//     }
 
-    .month-bar-img {
-        padding: 0 10px;
-    }
-}
+//     .month-bar-img {
+//         padding: 0 10px;
+//     }
+// }
