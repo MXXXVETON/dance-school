@@ -50,43 +50,42 @@ body {
 h1, .h1 {
   font-family: Blacker-Display, 'Open Sans';
   font-size: 64px;
-  line-height: 125%;
+  line-height: 1.2;
 
   @media screen and (max-width: 768px){
     font-size: 24px;
-    line-height: 145%;
+    line-height: 1.5;
   }
 }
 
 h2, .h2{
   font-family: Blacker-Display;
   font-size: 32px;
-  line-height: 150%;
+  line-height: 1.5;
   color: #444444;
 
   @media screen and (max-width: 768px){
-      font-size: 18px;
-      line-height: 140%;
+    font-size: 18px;
   }
 }
 
 h3, .h3 {
   font-family: BeauSansPro-light, 'Open Sans';
   font-size: 24px;
-  line-height: 140.62%;
+  line-height: 1.4;
 
   @media screen and (max-width: 768px){
-      font-size: 14px;
-      line-height: 140%;
+    font-size: 14px;
   }
 }
 
 p {
   font-size: 18px;
+  line-height: 1.5;
+
 
   @media screen and (max-width: 768px){
-      font-size: 14px;
-      line-height: 150%;
+    font-size: 14px;
   }
 }
 
@@ -95,14 +94,14 @@ li {
 }
 
 a {
-color: #57F1D8;
-
-&:hover, 
-&:active, 
-&:link, 
-&:visited {
   color: #57F1D8;
-}
+
+  &:hover, 
+  &:active, 
+  &:link, 
+  &:visited {
+    color: #57F1D8;
+  }
 }
 
 // Google map

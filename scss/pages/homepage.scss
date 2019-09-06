@@ -2,37 +2,36 @@
 
 // benefits
 .benefit {
+  margin-right: -15px;
+  margin-left: -15px;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 120px;
-  position: relative;
   flex-wrap: wrap;
 
-  :nth-child(n) {
-    margin-bottom: 30px;
-  }
+  &__card {
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-p {
-    margin-top: 20px;
-}
-
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-    justify-content: center;
-
-    div:nth-child(n) {
-      width: 100%;
-      flex-wrap: wrap;
-
-      img {
-          margin: 0 auto;
-      }
+    p {
+      text-align: center;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    #page-listner {
-    bottom: -30px
+  &__card-img {
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+      width: 35%;
+      margin-bottom: 25px;
     }
   }
 }

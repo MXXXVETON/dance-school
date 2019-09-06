@@ -14,65 +14,58 @@
     <!-- Header -->
     <div class="header">
       <div class="container">
-        <div class="nav d-flex">
-          <div class="logo">
-            <a href="#"><img src="/img/header/header-logo.svg" alt=""></a>
-          </div>
+        <div class="nav">
+          <a class="nav__logo" href="#"><img src="/img/header/header-logo.svg" alt=""></a>
 
-          <div class="connect-info d-flex flex-center">
-            <span class="tel-number">+7 495 123-25-67</span>
+          <div class="nav__controls">
+            <span class="nav__controls-tel">+7 495 123-25-67</span>
 
-            <a href="#" class="social-img">
-              <img src="/img/header/telegram.svg" alt="">
-            </a>
-
-            <a href="#" class="social-img">
-              <img src="/img/header/whatsapp.svg" alt="">
-            </a>
-
-            <a href="#" class="social-img">
-              <img src="/img/header/viber.svg" alt="">
-            </a>
-
-            <div class="btn btn_blue ml3 d-none-w768">ОБРАТНЫЙ ЗВОНОК</div>
+            <ul class="nav__controls-social">
+              <li><a href="#"><img src="/img/header/telegram.svg" alt=""></a></li>
+              <li><a href="#"><img src="/img/header/whatsapp.svg" alt=""></a></li>
+              <li><a href="#"><img src="/img/header/viber.svg" alt=""></a></li>
+            </ul>
+  
+            <a class="btn btn_blue btn_sm">Обратный звонок</a>
           </div>
         </div>
       </div>
 
-      <div class="about-school flex-column flex-center">
-        <h1 class="about-school__title">
-          Школа танца <br>
-          с индивидуальным подходом
-        </h1>
+      <div class="header__content">
+        <div class="header-title">
+          <div class="header-title__title">
+            Школа танца <br>
+            с индивидуальным подходом
+          </div>
 
-        <h3 class="about-school__subtitle">
-          Танцы на пилоне, Стрип-пластика,<br>
-          спортивные тренировки для начинающих<br>
-          и профессиональных танцовщиц.
-        </h3>
+          <div class="header-title__subtitle">
+            Танцы на пилоне, Стрип-пластика,<br>
+            спортивные тренировки для начинающих<br>
+            и профессиональных танцовщиц.
+          </div>
+        </div>
 
-        <div class="btn btn_white">бесплатнаЯ КОНСУЛЬТАЦИЯ</div>
+        <div class="btn btn_white">Бесплатная консультация</div>
 
-        <a href="" class="icon-slide-down"><img src="/img/header/frame.svg" alt=""></a>
+        <a href="" class="header-title__arrow-down"><img src="/img/header/frame.svg" alt=""></a>
       </div>
     </div>
 
   <!-- Content -->
-
-    <!-- benefits -->
+    <!-- benefit -->
     <div class="container">
       <div class="benefit">
-        <div class="text-center flex-column">
-          <img src="/img/content/individual.svg" alt="">
+        <div class="benefit__card">
+          <div class="benefit__card-img"><img src="/img/content/individual.svg" alt=""></div>
 
           <p>
-            <strong>Индивидуальный подход </strong> <br>
+            <strong>Индивидуальный подход</strong> <br>
             Найдем общий язык с каждым
           </p>
         </div>
 
-        <div class="text-center flex-column">
-          <img src="/img/content/confidence.svg" alt="">
+        <div class="benefit__card">
+          <div class="benefit__card-img"><img src="/img/content/confidence.svg" alt=""></div>
 
           <p>
             <strong>Конфеденциальность</strong> <br>
@@ -80,8 +73,8 @@
           </p>
         </div>
 
-        <div class="text-center flex-column">
-          <img src="/img/content/learning.svg" alt="">
+        <div class="benefit__card">
+          <div class="benefit__card-img"><img src="/img/content/learning.svg" alt=""></div>
 
           <p>
             <strong>Обучения с 0</strong> <br>
@@ -89,8 +82,8 @@
           </p>
         </div>
 
-        <div class="text-center flex-column">
-          <img src="/img/content/feetback.svg" alt="">
+        <div class="benefit__card">
+          <div class="benefit__card-img"><img src="/img/content/feetback.svg" alt=""></div>
 
           <p>
             <strong>Обратная связь</strong> <br>
@@ -98,8 +91,8 @@
           </p>
         </div>
         
-        <div class="text-center flex-column">
-          <img src="/img/content/intensive.svg" alt="">
+        <div class="benefit__card">
+          <div class="benefit__card-img"><img src="/img/content/intensive.svg" alt=""></div>
 
           <p>
             <strong>Интерактивность</strong> <br>
@@ -107,9 +100,10 @@
           </p>
         </div>
       </div>
+      
       <!-- controllers -->
       <div class="p-relative">
-        <div id="page-listner" class="d-flex">
+        <div id="page-listner" class=">
           <div class="prev">
             <img src="/img/controllers/arrow-left.svg" alt="">
           </div>
@@ -126,23 +120,24 @@
     <!-- individula work -->
     <div class="gray-bg mb15">
       <div class="container">
-        <div class="individual-work d-flex">
-          <div class="individual-work__context flex-column">
-            <h2 class="h2">
+        <div class="individual-work">
+          <div class="section-title">
+            <div class="section-title__title">
               Что такое индивидуальные <br>
               занятия в нашей школе?
-            </h2>
+            </div>
 
-            <p>
+            <div class="section-title__subtitle">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            </div>
 
-            <div class="btn btn_transparent w20">Узнать больше</div>
+            <div class="btn btn_transparent">Узнать больше</div>
           </div>
 
           <div class="individual-work__video">
             <video class="video" controls>
             </video>
+
             <div id="play-video" class="video-launch video-play-button" rel="shadowbox;height=450;width=800" href="link">
               <span></span>
             </div>
@@ -153,16 +148,16 @@
 
     <!-- direction  -->
     <div class="contaier">
-      <div class="direction flex-column text-center">
-        <div class="direction__title">
-          <h2>Наши наравления</h2>
-          <p class="text-center">
+      <div class="direction ">
+        <div class="section-title">
+          <div class="section-title__title">Наши наравления</div>
+          <div class="section-title__subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
             labore et dolore magna aliqua.
-          </p>
+          </div>
         </div>
         
-        <div class="direction__content d-flex">
+        <div class="direction__content">
           <div class="direction__content-card">
             <div class="card-img">
               <img src="/img/type-dance/heels.png" alt="">
@@ -197,7 +192,7 @@
         </div>
   <!-- controllers -->
         <div class="p-relative">
-          <div id="page-listner" class="d-flex">
+          <div id="page-listner" class=">
             <div class="prev">
               <img src="/img/controllers/arrow-left.svg" alt="">
             </div>
@@ -215,7 +210,7 @@
     <!-- cource-list -->
     <div class="gray-bg mb15">
       <div class="container">
-        <div class="course-programm d-flex">
+        <div class="course-programm">
           <div class="course-programm__video">
             <video class="video" controls>
               </video>
@@ -224,7 +219,7 @@
             </div>
           </div>
 
-          <div class="course-programm__context flex-column">
+          <div class="course-programm__context">
             <h2 class="course-programm__context-title">Курс: Обучение с нуля</h2>
 
             <ul class="course-programm__list">
@@ -243,16 +238,16 @@
 
     <!-- foto-instagram -->
     <div class="container">
-      <div class="foto-instagram flex-column flex-center mb15">
-        <div class="foto-instagram__title flex-column flex-center">
-          <h2>Фотографии</h2>
-          <p class="text-center">
+      <div class="foto-instagram">
+        <div class="section-title">
+          <div class="section-title__title">Фотографии</div>
+          <div class="section-title__subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
             labore et dolore magna aliqua.
-          </p>
+          </div>
         </div>
 
-        <div class="foto-instagram__card d-flex">
+        <div class="foto-instagram__card">
           <div class="instagram-foto-card">
             <img src="/img/foto/foto1.png" alt="">
           </div>
@@ -279,19 +274,19 @@
     </div>
 
     <!-- online lesson -->
-    <div class="gray-bg mb15">
+    <div class="gray-bg">
       <div class="container">
-        <div class="online-lesson d-flex">
-          <div class="online-lesson__context flex-column">
-            <h2 class="h2">
+        <div class="online-lesson">
+          <div class="section-title">
+            <div class="section-title__title">
               Онлайн урок
-            </h2>
+            </div>
 
-            <p>
+            <div class="section-title__subtitle">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            </div>
 
-            <div class="btn btn_transparent w20">Узнать больше</div>
+            <div class="btn btn_transparent">Узнать больше</div>
           </div>
 
           <div class="online-lesson__img">
@@ -304,11 +299,11 @@
     <!-- comments -->
     <div class="container">
       <div class="comments">
-        <h2 class="text-center">Мы любим своих клиентов</h2>
+        <h2 class="">Мы любим своих клиентов</h2>
 
         <div class="slider-comments">
           <div class="user-comment">
-            <div class="member flex-column flex-center">
+            <div class="member">
               <p class="user-message">
                 “Занимаюсь не так давно, всё нравиться. Большим плюсом является возможность заниматься онлайн! <br>
                 Очень хорошие тренера! Всем уделяют время и если что-то не получается, помогут в трудную минуту.”
@@ -318,14 +313,14 @@
                 <img src="/img/member-photo.png" alt="">
               </div>
         
-              <div class="member-name d-flex">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
+              <div class="member-name">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
         
               <span>проходит курс <a href="#">Classical Pole Dance</a></span>
             </div>
           </div>
 
           <div class="user-comment">
-            <div class="member flex-column flex-center">
+            <div class="member">
               <p class="user-message">
                 “Занимаюсь не так давно, всё нравиться. Большим плюсом является возможность заниматься онлайн! <br>
                 Очень хорошие тренера! Всем уделяют время и если что-то не получается, помогут в трудную минуту.”
@@ -335,14 +330,14 @@
                 <img src="/img/member-photo.png" alt="">
               </div>
         
-              <div class="member-name d-flex">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
+              <div class="member-name">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
         
               <span>проходит курс <a href="#">Classical Pole Dance</a></span>
             </div>
           </div>
 
           <div class="user-comment">
-            <div class="member flex-column flex-center">
+            <div class="member">
               <p class="user-message">
                 “Занимаюсь не так давно, всё нравиться. Большим плюсом является возможность заниматься онлайн! <br>
                 Очень хорошие тренера! Всем уделяют время и если что-то не получается, помогут в трудную минуту.”
@@ -352,14 +347,14 @@
                 <img src="/img/member-photo.png" alt="">
               </div>
         
-              <div class="member-name d-flex">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
+              <div class="member-name">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
         
               <span>проходит курс <a href="#">Classical Pole Dance</a></span>
             </div>
           </div>
 
           <div class="user-comment">
-            <div class="member flex-column flex-center">
+            <div class="member">
               <p class="user-message">
                 “Занимаюсь не так давно, всё нравиться. Большим плюсом является возможность заниматься онлайн! <br>
                 Очень хорошие тренера! Всем уделяют время и если что-то не получается, помогут в трудную минуту.”
@@ -369,14 +364,14 @@
                 <img src="/img/member-photo.png" alt="">
               </div>
         
-              <div class="member-name d-flex">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
+              <div class="member-name">Наталья А. <img src="/img/comments-vk.svg" alt=""> </div>
         
               <span>проходит курс <a href="#">Classical Pole Dance</a></span>
             </div>
           </div>
         </div>
         
-        <div id="comments-controls" class="d-flex">
+        <div id="comments-controls">
           <div class="prev">
             <img src="/img/controllers/arrow-left.svg" alt="">
           </div>
@@ -393,13 +388,16 @@
     <!-- abonements/price -->
     <div class="gray-bg">
       <div class="container">
-        <div class="price flex-column flex-center">
-          <h2>Абонементы и цены</h2>
-
-          <span class="subtitle text-center">
-            Получите или улучшите свои навыки с помощью серии занятий. <br>
-            Стоимость абонементов указана исключительно за индивидуальные занятия.
-          </span>
+        <div class="price">
+          <div class="section-title">
+            <div class="section-title__title">
+              Абонементы и цены
+            </div>
+            <div class="section-title__subtitle">
+              Получите или улучшите свои навыки с помощью серии занятий. <br>
+              Стоимость абонементов указана исключительно за индивидуальные занятия.
+            </div>
+          </div>
 
           <div class="month-number">
             <div class="month-number-img">
@@ -419,8 +417,8 @@
             </div>
           </div>
 
-          <div class="abonements d-flex">
-            <div class="abonements__card flex-column flex-center">
+          <div class="abonements">
+            <div class="abonements__card">
               <div class="abonements__card-month">
                 <img src="/img/junck-for-kick.svg" alt="">
               </div>
@@ -429,7 +427,7 @@
 
               <span class="abonements__card-subtitle"> 1 занятия = 1 час = 2500 ₽</span>
 
-              <ul class="abonements__card-dance-type text-center">
+              <ul class="abonements__card-dance-type ">
                 <li>High Heels Dance</li>
                 <li>Classical Pole Dance</li>
                 <li>Chair Dance</li>
@@ -441,7 +439,7 @@
               <div class="btn btn_transparent">купить абонемент</div>
             </div>
 
-            <div class="abonements__card flex-column flex-center">
+            <div class="abonements__card">
               <div class="abonements__card-month">
                 <img src="/img/junck-for-kick.svg" alt="">
               </div>
@@ -450,7 +448,7 @@
 
               <span class="abonements__card-subtitle"> 1 занятия = 1 час = 2300 ₽</span>
 
-              <ul class="abonements__card-dance-type text-center">
+              <ul class="abonements__card-dance-type ">
                 <li>High Heels Dance</li>
                 <li>Classical Pole Dance</li>
                 <li>Chair Dance</li>
@@ -463,7 +461,7 @@
               <div class="btn btn_transparent">купить абонемент</div>
             </div>
 
-            <div class="abonements__card flex-column flex-center">
+            <div class="abonements__card">
               <div class="abonements__card-month">
                 <img src="/img/junck-for-kick.svg" alt="">
               </div>
@@ -472,7 +470,7 @@
 
               <span class="abonements__card-subtitle"> 1 занятия = 1 час = 2100 ₽</span>
 
-              <ul class="abonements__card-dance-type text-center">
+              <ul class="abonements__card-dance-type ">
                 <li>High Heels Dance</li>
                 <li>Classical Pole Dance</li>
                 <li>Chair Dance</li>
@@ -485,7 +483,7 @@
               <div class="btn btn_transparent">купить абонемент</div>
             </div>
 
-            <div class="abonements__card flex-column flex-center">
+            <div class="abonements__card">
               <div class="abonements__card-month">
                 <img src="/img/junck-for-kick.svg" alt="">
               </div>
@@ -494,7 +492,7 @@
 
               <span class="abonements__card-subtitle"> 1 занятия = 1 час = 1800 ₽</span>
 
-              <ul class="abonements__card-dance-type text-center">
+              <ul class="abonements__card-dance-type ">
                 <li>High Heels Dance</li>
                 <li>Classical Pole Dance</li>
                 <li>Chair Dance</li>
@@ -513,21 +511,21 @@
 
     <!-- master class  -->
     <div class="container">
-      <div class="master-class d-flex">
+      <div class="master-class">
         <div class="master-class__img">
           <img src="/img/map.svg" alt="">
         </div>
 
-        <div class="master-class__context flex-column">
-          <h2 class="h2">
+        <div class="section-title">
+          <div class="section-title__title">
             Мастер класс в вашем городе
-          </h2>
+          </div>
 
-          <p>
+          <div class="section-title__subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          </div>
 
-          <div class="btn btn_blue w20">Узнать больше</div>
+          <div class="btn btn_blue">Узнать больше</div>
         </div>
       </div>
     </div>
@@ -535,8 +533,8 @@
     <!-- MAp Addres -->
     <div class="gray-bg">
       <div class="container">
-        <div class="addres-info d-flex">
-          <div class="contacts flex-column">
+        <div class="addres-info">
+          <div class="contacts">
             <h2 class="contacts__title">Контакты</h2>
     
             <ul class="contacts__info">
@@ -570,12 +568,12 @@
 
     <!-- Connect form -->
     <div class="container">
-      <div class="form-connection flex-column flex-center">
+      <div class="form-connection">
         <h2>Остались вопросы?</h2>
         <span class="subtitle">Проконсультируем по телефону. Оставьте заявку и мы Вам перезвоним!</span>
 
-        <!-- <form class="form d-flex flex-column" action="">
-          <div class="form__user-data d-flex">
+        <!-- <form class="form" action="">
+          <div class="form__user-data">
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Номер телефона">
           </div>
@@ -599,7 +597,7 @@
           </div>
         </form>
 
-        <div class="btn btn_blue w20">Отправить</div>
+        <div class="btn btn_blue">Отправить</div>
 
         <strong>Неудобно по телефону?</strong> <br>
         <p>Отвечаем и помогаем во <a href="#">Вконтакте</a>, <a href="#">Фейсбуке</a> или по <a href="#">почте</a>.</p>

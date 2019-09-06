@@ -2,53 +2,86 @@
 .nav {
   justify-content: space-between;
   padding: 15px 0;
+  display: flex;
+  line-height: 0;
 
   @media screen and (max-width: 768px) {
-    .logo {
-      img {
-        width: 100px;
-      }
+    &__logo > img {
+      width: 100px;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    &__controls-tel {
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    &__controls-social {
+      margin-right: 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__controls-tel {
+    margin-right: 20px;
+  }
+
+  &__controls-social {
+    display: flex;
+    margin-right: 20px;
+
+    li:nth-child(-n+2) {
+      margin-right: 5px;
     }
   }
 }
 
-.about-school {
-  background-image: url(/img/header/header-bg-img.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  margin-bottom: 130px;
+.header {
+  &__content {
+    background-image: url(/img/header/header-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 130px;
+    position: relative;
+  }
 
-  &__title {
+  .header-title {
+    color: #fff;
+    text-align: center;
+    
+  
+    &__title {
+      font-family: Blacker-Display, 'Open Sans';
+      font-size: 64px;
+      line-height: 1.2;
       margin-bottom: 42px;
-  }
-
-  &__subtitle {
-      margin-bottom: 71px;
-
-    @media screen and (max-width: 768px){
+    }
+  
+    &__subtitle {
+      font-size: 24px;
+      line-height:1.4;
       margin-bottom: 70px;
+      text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+    }
+  
+    &__arrow-down {
+        position: absolute;
+        transform: translate(-50%, 0);
+        left: 50%;
+        bottom: 0;
     }
   }
-
-  .icon-slide-down {
-      position: absolute;
-      transform: translate(-50%, 0);
-      left: 50%;
-      bottom: 10px;
-  }
-}
-
-.social-img {
-  margin-right: 4px;
-  padding-top: 2px;
-  border-radius: 2px;
-}
-
-.tel-number {
-  margin-right: 7px;
 }
