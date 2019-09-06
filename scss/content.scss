@@ -6,6 +6,11 @@
   justify-content: space-around;
   margin-bottom: 120px;
   position: relative;
+  flex-wrap: wrap;
+
+  :nth-child(n) {
+    margin-bottom: 30px;
+  }
 
 p {
     margin-top: 20px;

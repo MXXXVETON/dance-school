@@ -173,7 +173,11 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 120px;
-  position: relative; }
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .benefit :nth-child(n) {
+    margin-bottom: 30px; }
   .benefit p {
     margin-top: 20px; }
   @media screen and (max-width: 768px) {
