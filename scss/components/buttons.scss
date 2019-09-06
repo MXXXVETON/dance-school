@@ -1,31 +1,47 @@
-// Button style
-*.btn {
+.btn {
+  display: inline-flex;
   border-radius: 6px;
-  padding: 12px 7px 10px 7px;
+  padding: 2px 10px 0;
   text-transform: uppercase;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.5px;
-  line-height: 17px;
-}
+  border: 2px solid;
+  text-decoration: none;
+  min-width: 200px;
 
-.btn-blue {
-  background: #57f1d8;
-  color: #FFF;
-}
+  &_transparent {
+    background: transparent;
+    border-color: #57F1D8;
+    color: #0AE4BD;
+  }
 
-.btn-white {
-  background: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-  color: #000;
-}
+  &_blue {
+    background: #57f1d8;
+    border-color: #57f1d8;
+    color: #FFF;
+  }
 
-.btn-transparent {
-  background: transparent;
-  border: 2px solid #57F1D8;
-  color: #0AE4BD;
+  &_white {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    color: #000;
+  }
+
+  &_lg {
+    height: 56px;
+  }
+
+  &_md {
+    height: 46px;
+  }
+
+  &_sm {
+    height: 36px;
+  }
 }
 
 // Video play btn
@@ -110,7 +126,6 @@
 }
 
 @keyframes pulse-border {
-
   0% {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
