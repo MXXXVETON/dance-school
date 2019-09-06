@@ -1,0 +1,22 @@
+.slider-controls {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__counter {
+    font-size: 22px;
+    margin: 0 20px;
+  }
+
+  &__arrow {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    img {
+      width: 27px;
+    }
+  }
+}

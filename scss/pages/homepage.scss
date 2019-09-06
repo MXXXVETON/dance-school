@@ -1,186 +1,174 @@
-// content 
-
-// benefits
 .benefit {
   margin-right: -15px;
   margin-left: -15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
 
   &__card {
+    min-width: 220px;
     width: 20%;
     padding-right: 15px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #444444;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
 
     p {
       text-align: center;
+      font-size: 16px;
     }
+  }
+
+  &__title {
+    font-weight: 600;
+    text-align: center;
   }
 
   &__card-img {
     height: 120px;
     margin-bottom: 20px;
-  }
 
-  @media screen and (max-width: 1200px) {
-    flex-wrap: wrap;
-    justify-content: center;
-
-    &__card {
-      width: 35%;
-      margin-bottom: 25px;
+    img {
+      margin: auto;
     }
   }
 }
 
-// individual wokr 
 .individual-work {
-  padding: 120px 0;
+  display: flex;
   flex-wrap: wrap;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: space-between;
 
-  @media screen and (max-width: 768px){
-    padding: 70px 0;
-    flex-direction: column;
-    position: relative;
-
-      .btn {
-        position: absolute;
-        bottom: 20px;
-      }
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
   }
 
-  &__context {
-    width: 35%;
-    margin: 0 auto;
-    justify-content: center;
+  &__desc {
+    width: 40%;
 
-    .h2, p {
-      margin-bottom: 40px;
-    }
-
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       width: 100%;
+      margin-bottom: 40px;
       text-align: center;
-      align-items: center;
     }
   }
 
   &__video {
-    width: 55%;
-    padding: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
 
     video {
       width: 100%;
       height: 100%;
-      position: relative;
     }
 
-    @media screen and (max-width: 768px){
-      height: 380px;
-      position: relative;
-      width: auto;
+    .video-play-button {
+      position: absolute;
     }
   }
 }
 
-// direction
 .direction {
+  margin-top: 150px;
   margin-bottom: 80px;
 
-  &__title {
-    h2 {
-      margin-bottom: 35px;
-
-    @media screen and (max-width: 768px) {
-      margin-bottom: 15px;
-    }
-  }
-
-  p {
-    margin-bottom: 55px;
-
-      @media screen and (max-width: 768px) {
-        margin-bottom: 20px;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   &__content {
     width: 100%;
-
-    @media screen and (max-width: 1100px) {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    }
+    margin-top: 40px;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 
-  &__content-card {
+  &__item {
     width: 25%;
-    padding: 0 5px;
+    min-width: 300px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
-    .card-img {
-      margin-bottom: 20px;
-      max-width: 300px;
-      margin: 15px auto;
+    @media screen and (max-width: 768px) {
+      p {
+        color: #26B899;
+      }
+    }
+  }
+
+  &__item-img {
+    margin-bottom: 20px;
+    max-width: 300px;
+    margin: 15px auto;
 
     img {
       width: 100%;
     }
   }
-
-  .direction-controllers {
-    bottom: auto;
-  }
-
-    @media screen and (max-width: 1100px) {
-      width: 45%;
-      margin-bottom: 15px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    #page-listner {
-    bottom: -30px
-    }
-  }
 }
 
-// course-programm
 .course-programm {
-  padding: 120px 0;
+  display: flex;
   flex-wrap: wrap;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: space-between;
 
-  @media screen and (max-width: 768px){
-    padding: 70px 0;
+  @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
-    position: relative;
+    padding: 60px 0;
+  }
 
-    .btn {
-      position: absolute;
-      bottom: 20px;
+  &__desc {
+    width: 40%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
     }
   }
 
-  &__context-title{
-    margin-left: -20px;
-    margin-bottom: 20px;
-  }
-
-  &__context {
-    width: 35%;
-    margin: 0 auto;
-    justify-content: center;
+  &__video {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
 
     @media screen and (max-width: 768px){
       width: 100%;
-      text-align: center;
-      align-items: center;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-play-button {
+      position: absolute;
     }
   }
 
@@ -192,178 +180,166 @@
     }
   }
 
-  ul > li {
-    position: relative;
-    margin-bottom: 15px;
-  
-    &::before {
-      position: absolute;
-      content: '';
-      background: #FFFFFF;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      border: 4px solid #57F1D8;
-      top: 0;
-      left: -20px;
+  ul {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-  }
 
-  &__video {
-    width: 55%;
-    padding: 15px;
-
-    video {
-      width: 100%;
-      height: 100%;
+    li {
       position: relative;
-    }
-
-    @media screen and (max-width: 768px){
-      height: 370px;
-      width: auto;
-    }
-  }
-}
-
-// foto-instagram
-.foto-instagram {
-
-  &__title {
-    margin-bottom: 50px;
-  }
-
-  &__card {
-    margin-bottom: 100px;
-    justify-content: space-around;
-    // flex-wrap: wrap;
-
-    img {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    :not(:last-child) {
-      margin-right: 10px;
-    }
-
-    @media screen and (max-width: 1200px) {
-
-      flex-wrap: wrap;
-      justify-content: center;
-  
-      div:nth-child(n) {
-        width: 30%;
-        flex-wrap: wrap;
-        margin: 10px;
-
-        @media screen and (max-width: 768px){
-          width: 45%;
-          margin: 5px;
-        }
+      margin-bottom: 15px;
+      padding-left: 25px;
+    
+      &::before {
+        position: absolute;
+        content: '';
+        background: #FFFFFF;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 4px solid #57F1D8;
+        top: 4px;
+        left: 0;
       }
     }
   }
 }
 
-// online lesson 
-.online-lesson {
-  padding: 120px 0;
-  flex-wrap: wrap;
+.instagram-photo {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
 
-  @media screen and (max-width: 768px){
-    padding: 70px 0;
-    flex-direction: column;
-    position: relative;
-
-    .btn {
-      position: absolute;
-      bottom: 20px;
-    }
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
-  &__context {
-    width: 35%;
-    margin: 0 auto;
-    justify-content: center;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    margin-bottom: 80px;
+  }
 
-    .h2, p {
-      margin-bottom: 40px;
+  &__card {
+    margin-bottom: 10px;
+    width: 20%;
+    padding: 0 5px;
+    max-width: 270px;
+
+    @media screen and (max-width: 768px) {
+      width: 50%;
+
+      &:last-of-type {
+        display: none;
+      }
     }
 
-    @media screen and (max-width: 768px){
+    img {
+      display: block;
+      max-width: 100%;
       width: 100%;
+    }
+  }
+}
+
+.online-lesson {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  &__desc {
+    width: 40%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 40px;
       text-align: center;
-      align-items: center;
     }
   }
 
   &__img {
-    width: 55%;
-    padding: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
 
     img {
       width: 100%;
     }
-
-    @media screen and (max-width: 768px){
-      width: auto;
-    }
   }
 }
 
-// comments
 .comments {
-  position: relative;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 
-  .current-slide {
-    margin: 0 10px;
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
-  .comments-controls {
-    position: absolute;
-    left: 50%;
-    bottom: -20px;
-    transform: translate(-50%, 0);
-  }
+  .user-comment {
+    text-align: center;
 
-  .prev,
-  .next {
-    cursor: pointer;
-  }
-
-  h2 {
-    margin-bottom: 70px;
-  }
-
-  p {
-    margin-bottom: 40px;
-
-    @media screen and (max-width: 768px) {
-      text-align: center;
+    &__message {
+      margin-bottom: 40px;
+      color: #5D5D5D;
     }
-  }
 
-  .member {
-    margin-bottom: 40px;
-  }
+    &__photo {
+      width: 67px;
+      height: 67px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
 
-  .member-name {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
+      img {
+        width: 100%;
+      }
+    }
 
-  .member-photo {
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
+    &__name {
+      font-size: 18px;
+      margin-bottom: 15px;
+
+      &:after {
+        content: url('../img/comments-vk.svg');
+        margin-left: 7px;
+      }
+    }
+
+    &__course {
+      font-size: 14px;
+      color: #444444;
+    }
   }
 }
 
-// Price/abonements
 .price {
-  padding: 115px 0;
+  padding: 120px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
 
   .subtitle {
     margin-bottom: 70px;
@@ -378,19 +354,17 @@
 
     @media screen and (max-width: 768px) {
       display: flex;
+      justify-content: center;
     }
   }
 }
 
 .abonements {
-
-  div:not(:last-child){
-    margin-right: 25px;
-
-    @media screen and (max-width: 1200px) {
-      margin: 10px
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -15px;
+  margin-right: -15px;
   
   &__card {
     background: #FFFFFF;
@@ -398,15 +372,17 @@
     border-radius: 6px;
     padding: 25px;
     font-family: Roboto;
+    text-align: center;
+    width: 25%;
+    min-width: 300px;
+    margin: 10px;
 
-    @media screen and (max-width: 1200px) {
-      margin: 10px;
-      width: 25%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
     }
 
-    @media screen and (max-width: 765px) {
-      margin: 10px;
-      width: auto;
+    .btn {
+      margin-top: 20px;
     }
   }
 
@@ -419,6 +395,10 @@
     font-size: 20px;
     color: #000000;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__card-subtitle{
@@ -426,6 +406,10 @@
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__card-dance-type{
@@ -440,12 +424,20 @@
   &__card-price{
     font-size: 28px;
     font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__card-bonus{
     color: #F87A7A;
     font-size: 12px;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 
   @media screen and (max-width: 1200px) {
@@ -461,79 +453,81 @@
   }
 }
 
-
-// master class
-.master-class {
-  padding: 120px 0;
+.masterclass {
+  display: flex;
   flex-wrap: wrap;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: space-between;
 
-  @media screen and (max-width: 768px){
-    padding: 50px 0;
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
     flex-direction: column-reverse;
-    position: relative;
-
-    .btn {
-      position: absolute;
-      bottom: 20px;
-    }
   }
 
-  &__context {
-    width: 35%;
-    margin: 0 auto;
-    justify-content: center;
+  &__desc {
+    width: 40%;
 
-    .h2, p {
-      margin-bottom: 40px;
-    }
-
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       width: 100%;
+      margin-bottom: 40px;
       text-align: center;
-      align-items: center;
     }
   }
 
   &__img {
-    width: 55%;
-    padding: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
 
     img {
       width: 100%;
-      position: relative;
-    }
-
-    @media screen and (max-width: 768px){
-      width: auto;
-      position: relative;
-      top: -25px;
     }
   }
 }
 
-// addres-info
 .addres-info {
-  margin-bottom: 100px;
-  padding: 100px 50px;
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding: 70px 0;
-    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__desc {
+    width: 35%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__map {
+    width: 65%;
+    height: 350px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+    }
   }
 
   .contacts {
-    width: 30%;
     padding: 15px;
     justify-content: center;
 
-    @media screen and (max-width: 768px){
-      width: auto;
+    @media screen and (max-width: 768px) {
+      width: 100%;
       padding: 0;
       margin: 0 auto;
-    }
-
-    h2 {
-      margin-bottom: 15px;
     }
 
     &__info {
@@ -582,82 +576,3 @@
     }
   }
 }
-
-// form
-.form-connection {
-  margin-bottom: 80px;
-  text-align: center;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 10px;
-  }
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  .subtitle {
-    margin-bottom: 72px;
-  }
-
-  .form {
-    width: 550px;
-
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-
-    // &__user-data {
-    //   justify-content: space-between;
-    //   margin-bottom: 30px;
-
-    //    input {
-    //      width: 48%;
-    //      max-width: 550px;
-    //    }
-
-    //    @media screen and (max-width: 768px) {
-    //      margin-bottom: 0;
-    //      flex-direction: column;
-
-    //      input {
-    //        width: 100%;
-    //        margin-bottom: 25px;
-    //      }
-    //    }
-    // }
-
-    // &__user-comment {
-    //   margin-bottom: 50px;
-
-    //   textarea {
-    //     width: 100%;
-    //     max-width: 550px;
-    //     height: 150px;
-    //   }
-    // }
-  }
-
-  .btn {
-    margin-bottom: 80px;
-  }
-}
-
-// footer 
-
-
-
-// //  мусорка
-// subtitle mb30 
-// .month-bar {
-//     justify-content: space-around;
-//     display: none;
-
-//     @media screen and (max-width: 768px) {
-//         display: flex;
-//     }
-
-//     .month-bar-img {
-//         padding: 0 10px;
-//     }
-// }

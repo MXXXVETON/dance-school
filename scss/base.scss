@@ -32,11 +32,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
-// Main
 .wrapper {
-  
+  margin-top: 64px;
 }
 
 .container {
@@ -101,37 +104,5 @@ a {
   &:link, 
   &:visited {
     color: #57F1D8;
-  }
-}
-
-// Google map
-#map {
-  width: 65%;
-  height: 350px;
-  background-color: grey;
-
-  @media screen and (max-width: 768px) {
-      width: auto;
-      height: 300px;
-  }
-}
-
-// input
-input, textarea {
-  background: #FFFFFF;
-  border: 1px solid #CECECE;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 10px 7px 10px 7px;
-
-  ::placeholder {
-  font-size: 16px;
-  line-height: 140.62%;
-  color: #A4A4A4;
-  }
-
-  @media screen and (max-width: 768px){
-    font-size: 14px;
-    line-height: 150%;
   }
 }

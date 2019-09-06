@@ -28,7 +28,7 @@
     background: #FFFFFF;
     border-color: #FFFFFF;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-    color: #000;
+    color: #4B594A;
   }
 
   &_lg {
@@ -44,10 +44,9 @@
   }
 }
 
-// Video play btn
 .video-play-button {
   position: relative;
-  z-index: 10;
+  z-index: 9;
   box-sizing: content-box;
   display: block;
   width: 32px;
@@ -55,9 +54,10 @@
   border-radius: 50%;
   padding: 18px 20px 18px 28px;
   box-shadow: 0 0px 30px rgba(87, 241, 216, 0.5);
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
 
 
   &:before {
@@ -92,7 +92,6 @@
   }
 
   &:hover {
-
     &:after {
       background: rgb(87, 241, 216);
       transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);

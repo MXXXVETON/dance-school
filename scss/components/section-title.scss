@@ -1,10 +1,19 @@
 .section-title {
+  &_center {
+    text-align: center;
+  }
+
   &__title {
+    font-family: Blacker-Display, 'Open Sans';
     font-size: 32px;
+    margin-bottom: 40px;
+    color: #444444;
   }
 
   &__subtitle {
     font-size: 18px;
+    margin-bottom: 40px;
+    color: #5D5D5D;
   }
 }
 
