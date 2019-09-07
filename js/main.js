@@ -2,7 +2,8 @@ $(function() {
   initSlider('.benefit', 768)
   initSlider('.direction__content', 768)
   initSlider('.abonements', 768)
-  initSlider('.slider-comments')
+  initSlider('.slider-comments');
+  initSlider('.inner-foto-slider')
 })
 
 function initSlider(sliderSelecter, maxScreenSize) {

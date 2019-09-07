@@ -536,6 +536,9 @@ a {
       @media screen and (max-width: 768px) {
         .nav__controls .btn {
           display: none; } }
+    @media screen and (max-width: 768px) {
+      .nav__controls .nav__tel {
+        font-size: 12px; } }
   .nav__tel {
     color: #5D5D5D;
     font-size: 16px; }
@@ -743,7 +746,11 @@ a {
       .course-programm__desc {
         width: 100%;
         margin-bottom: 40px;
-        text-align: center; } }
+        text-align: center; }
+        .course-programm__desc ul {
+          -webkit-box-align: baseline !important;
+              -ms-flex-align: baseline !important;
+                  align-items: baseline !important; } }
   .course-programm__video {
     width: 50%;
     display: -webkit-box;
@@ -1097,3 +1104,133 @@ a {
       position: absolute;
       top: 0;
       left: -30px; }
+
+.main-wrapper {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 150px auto; }
+  .main-wrapper .wrapp {
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 40px; }
+  .main-wrapper .added-wrapp {
+    width: 30%; }
+  .main-wrapper .card {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px; }
+
+.content {
+  padding: 40px; }
+  .content p {
+    margin: 40px 0; }
+  .content__masterclass-img img {
+    width: 100%; }
+  .content__img {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .content__img .foto-box {
+      width: 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 10px; }
+    .content__img img {
+      width: 100%; }
+  .content__video {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .content__video {
+        width: 100%; } }
+    .content__video video {
+      width: 100%;
+      height: 100%; }
+    .content__video .video-play-button {
+      position: absolute; }
+  .content .call-beck {
+    background: #FCFCFC;
+    border: 1px solid #E9E9E9;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 6px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 30px; }
+    .content .call-beck__title {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 600; }
+    .content .call-beck .form-item {
+      width: 50%; }
+  .content .share-with {
+    padding: 50px 0;
+    margin: 60px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 2px solid #E7E9EE;
+    border-bottom: 2px solid #E7E9EE; }
+    .content .share-with__title {
+      font-weight: 600; }
+  .content .pagination {
+    margin-bottom: 40px;
+    color: #C6C6C6;
+    font-size: 14px; }
+
+.inner-direction__title {
+  font-weight: 600; }
+
+.inner-direction__slider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px; }
+
+.inner-direction__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: #FCFCFC;
+  border: 1px solid #E9E9E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px; }
+  .inner-direction__item img {
+    width: 100%; }

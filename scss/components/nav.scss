@@ -36,6 +36,12 @@
         display: none;
       }
     }
+    
+    @media screen and (max-width: 768px) {
+      .nav__tel {
+        font-size: 12px;
+      }
+    }
   }
 
   &__tel {
