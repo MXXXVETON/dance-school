@@ -68,23 +68,3 @@ function initSlider(sliderSelecter, maxScreenSize, callback) {
     callback(slider)
   }
 }
-
-
-// google map
-var map;
-const fitnesCenter = {lat: 55.757902, lng: 37.582900};
-const castomMarker = $('.castom-marker');
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: fitnesCenter,
-    zoom: 15
-  });
-
-  var marker = new google.maps.Marker({
-    position: fitnesCenter,
-    map: map,
-    title: "Anna Hals's",
-    // icon: castomMarker,
-  });
-}
