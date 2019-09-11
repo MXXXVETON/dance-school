@@ -1,12 +1,35 @@
 $(function() {
+  // sliders
   initSlider('.benefit', 768)
   initSlider('.direction__content', 768)
-  initSlider('.abonements', 768)
   initSlider('.slider-comments');
-  initSlider('.inner-foto-slider')
+  initSlider('.inner-foto-slider');
+  initSlider('.abonements', 768, function(slider) {
+    $(document).on('click', '[data-abonement-dot]', function(e) {
+      e.preventDefault();
+      $('[data-abonement-dot]').removeClass('active');
+      const el = $(this).addClass('active');
+      const slideIndex = el.attr('data-abonement-dot');
+      slider.slick('slickGoTo', slideIndex);
+    })
+  })
+
+  // slow scrolling to element by ancor link
+  $(document).on('click', 'a[href^="#"]', function(e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top - $('.nav').height()
+    }, 1200);
+  })
 })
 
-function initSlider(sliderSelecter, maxScreenSize) {
+/**
+ * @param {string} sliderSelecter - slider container selector
+ * @param {number} maxScreenSize - max screen width for init slider. all sizes if empty
+ * @param {(slider) => void} callback - fires after slider init. slider arg is inied slick slider
+ */
+function initSlider(sliderSelecter, maxScreenSize, callback) {
   if (!!maxScreenSize && $(document).width() > maxScreenSize) {
     return false;
   }
@@ -40,9 +63,11 @@ function initSlider(sliderSelecter, maxScreenSize) {
   slider.on('afterChange', function(event, slick, count) {
     $(`.${counter}`).find('span').html(count + 1)
   })
+
+  if (typeof callback === 'function') {
+    callback(slider)
+  }
 }
-
-
 
 
 // google map

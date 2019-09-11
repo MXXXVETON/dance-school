@@ -5,6 +5,11 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 60px;
+  padding-top: 130px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 60px;
+  }
 
   &__card {
     min-width: 220px;
@@ -197,6 +202,7 @@
       position: relative;
       margin-bottom: 15px;
       padding-left: 25px;
+      text-align: left;
     
       &::before {
         position: absolute;
@@ -359,6 +365,16 @@
     @media screen and (max-width: 768px) {
       display: flex;
       justify-content: center;
+      margin-bottom: 20px;
+
+      &__img {
+        opacity: 0.35;
+        margin: 0 8px;
+
+        &.active {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -371,15 +387,20 @@
   margin-right: -15px;
   
   &__card {
+    width: 25%;
+    min-width: 330px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
     padding: 25px;
     font-family: Roboto;
     text-align: center;
-    width: 25%;
     min-width: 300px;
-    margin: 10px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -438,6 +459,7 @@
     color: #F87A7A;
     font-size: 12px;
     margin-bottom: 15px;
+    font-weight: normal;
 
     @media screen and (max-width: 768px) {
       display: block;
