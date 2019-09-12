@@ -1,19 +1,39 @@
 .main-wrapper {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -50px;
+  margin-left: -50px;
   display: flex;
   flex-wrap: wrap;
   margin: 150px auto;
 
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    margin-top: 100px;
+  }
+
   .wrapp {
     width: 60%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 25px;
+    padding-left: 50px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .added-wrapp {
-    width: 30%;
+    width: 40%;
+    padding-right: 50px;
+    padding-left: 25px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .card {
@@ -21,10 +41,21 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
   }
+
+  @media screen and (max-width: 768px) {
+    .wrapp,
+    .added-wrapp {
+      width: 100%;
+    }
+  }
 }
 
 .content {
   padding: 40px;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
 
   p {
     margin: 40px 0;
@@ -37,16 +68,18 @@
   }
 
   &__img {
-    margin-right: -15px;
-    margin-left: -15px;
     display: flex;
-    flex-wrap: wrap;
+
+    div:first-child {
+      margin-right: 50px;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 10px;
+      }
+    }
 
     .foto-box {
       width: 50%;
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-bottom: 10px;
     }
 
     img {
@@ -67,6 +100,7 @@
     video {
       width: 100%;
       height: 100%;
+      min-height: 200px;
     }
 
     .video-play-button {
@@ -82,16 +116,34 @@
     margin: 0 auto;
     text-align: center;
     padding: 50px 30px;
+
+    @media screen and (max-width: 768px) {
+      padding: 50px 15px;
+    }
   
     &__title {
       margin-bottom: 50px;
       font-size: 20px;
       line-height: 1.4;
       font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
+
+    .form-group {
+      margin-bottom: 30px;
+
+      .form-item {
+        width: 50%;
   
-    .form-item {
-      width: 50%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          max-width: 500px;
+          margin: 10px auto;
+        }
+      }
     }
   }
   
@@ -99,12 +151,25 @@
     padding: 50px 0;
     margin: 60px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-top: 2px solid #E7E9EE;
     border-bottom: 2px solid #E7E9EE;
   
     &__title {
       font-weight: 600;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .footer__social {
+      @media screen and (max-width: 768px) {
+        li {
+          margin-right: 7px;
+        }
+      }
     }
   }
 
@@ -115,33 +180,64 @@
   }
 }
 
-.inner-direction {
-  &__title {
-    font-weight: 600;
+.more-info {
+  padding: 25px;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
   }
 
-  &__slider {
+  &__title {
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+
+  &__direction_slider {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
   }
 
   &__item {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-
     background: #FCFCFC;
     border: 1px solid #E9E9E9;
     box-sizing: border-box;
     border-radius: 6px;
+    overflow: hidden;
 
     img{
       width: 100%;
+    }
+  }
+
+  &__direction-content {
+    text-align: center;
+    padding: 15px;
+  }
+
+  &__service-content {
+    padding: 15px 10px;
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 144%;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-style: 16px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+
+    a {
+      font-style: 14px;
+      text-decoration: none;
     }
   }
 }

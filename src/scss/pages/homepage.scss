@@ -567,7 +567,7 @@
 
     &__info-addres {
       ::before {
-        content: url(/img/contact-icon/geo.svg);
+        content: url(../img/contact-icon/geo.svg);
         position: absolute;
         top: 7px;
         left: -30px;
@@ -576,7 +576,7 @@
 
     &__info-work-time {
       ::before {
-        content: url(/img/contact-icon/clock.svg);
+        content: url(../img/contact-icon/clock.svg);
         position: absolute;
         top: 7px;
         left: -30px;
@@ -585,7 +585,7 @@
 
     &__info-call-number {
       ::before {
-        content: url(/img/contact-icon/phone-call.svg);
+        content: url(../img/contact-icon/phone-call.svg);
         position: absolute;
         top: 7px;
         left: -30px;
@@ -594,7 +594,7 @@
 
     &__info-e-mail {
       ::before {
-        content: url(/img/contact-icon/mail.svg);
+        content: url(../img/contact-icon/mail.svg);
         position: absolute;
         top: 0;
         left: -30px;
