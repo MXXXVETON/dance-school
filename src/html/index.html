@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Dance School</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='/css/styles.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  @@include('utils/head.html')
 </head>
 <body>
   <div class="wrapper">
 
-    <div class="nav">
-      <div class="container">
-        <a class="nav__logo" href="#"><img src="/img/header/header-logo.svg" alt=""></a>
-
-        <div class="nav__controls">
-          <span class="nav__tel">+7 495 123-25-67</span>
-
-          <ul class="nav__socials">
-            <li><a href="#"><img src="/img/header/telegram.svg" alt=""></a></li>
-            <li><a href="#"><img src="/img/header/whatsapp.svg" alt=""></a></li>
-            <li><a href="#"><img src="/img/header/viber.svg" alt=""></a></li>
-          </ul>
-
-          <a class="btn btn_blue btn_sm">Обратный звонок</a>
-        </div>
-      </div>
-    </div>
+    @@include('nav.html')
 
     <div class="header">
       <div class="container">
@@ -455,69 +434,12 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="form-connection">
-        <div class="section-title">
-          <div class="section-title__title">Остались вопросы?</div>
-          <div class="section-title__subtitle">
-            Проконсультируем по телефону. Оставьте заявку и мы Вам перезвоним!
-          </div>
-        </div>
-
-        <form action="">
-          <div class="form-group">
-            <div class="form-item">
-              <input type="text" placeholder="Имя">
-            </div>
-            <div class="form-item">
-              <input type="text" placeholder="Номер телефона">
-            </div>
-            <div class="form-item">
-              <textarea placeholder="Комментарий"></textarea>
-            </div>
-          </div>
-          <button class="btn btn_blue btn_md">Отправить</button>
-        </form>
-
-        <div class="form-connection__info">
-          <strong>Неудобно по телефону?</strong>
-          <p>Отвечаем и помогаем во <a href="#">Вконтакте</a>, <a href="#">Фейсбуке</a> или по <a href="#">почте</a>.</p>
-        </div>
-      </div>
-    </div>
+    @@include('footer-form.html')
 
   </div>
 
-  <div class="gray-bg">
-    <div class="container">
-      <div class="footer">
-        <div class="footer__content">
-          <div class="footer__controls">
-            <a href="#" class="footer__logo"><img src="/img/header/header-logo.svg" alt=""></a>
-            <a href="/" class="btn btn_transparent btn_sm">Обратный звонок</a>
-          </div>
-  
-          <ul class="footer__social">
-            <li><a href=""><img src="/img/footer-social/instagram.svg" alt=""></a></li>
-            <li><a href=""><img src="/img/footer-social/vk.svg" alt=""></a></li>
-            <li><a href=""><img src="/img/footer-social/facebook.svg" alt=""></a></li>
-            <li><a href=""><img src="/img/footer-social/youtube.svg" alt=""></a></li>
-            <li><a href=""><img src="/img/footer-social/ok.svg" alt=""></a></li>
-          </ul>
-        </div>
+  @@include('footer.html')
 
-        <div class="footer__copyright">
-          <span>© 2019 Privacy — Terms</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script
-    src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-  <script src="/js/main.js"></script>
+  @@include('utils/includies.html')
 </body>
 </html>
