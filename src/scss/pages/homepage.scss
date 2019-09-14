@@ -106,6 +106,11 @@
     margin-top: 40px;
     margin-right: -15px;
     margin-left: -15px;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   &__item {
@@ -398,7 +403,6 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
     padding: 25px;
-    font-family: Roboto;
     text-align: center;
     min-width: 300px;
 
@@ -460,6 +464,7 @@
     font-size: 12px;
     margin-bottom: 15px;
     font-weight: normal;
+    min-height: 18px;
 
     @media screen and (max-width: 768px) {
       display: block;
