@@ -4,6 +4,8 @@ $(function() {
   initSlider('.direction__content', 768)
   initSlider('.slider-comments');
   initSlider('.inner-foto-slider');
+  initSlider('.more-info__direction_slider');
+  initSlider('.more-info__other-service_slider');
   initSlider('.abonements', 768, function(slider) {
     $(document).on('click', '[data-abonement-dot]', function(e) {
       e.preventDefault();

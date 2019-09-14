@@ -1,38 +1,30 @@
 .container_with-aside {
-  margin-right: -50px;
-  margin-left: -50px;
   display: flex;
   flex-wrap: wrap;
-  margin: 150px auto;
+  padding-top: 120px;
+  margin-bottom: 100px;
+  justify-content: space-between;
 
   @media screen and (max-width: 768px) {
+    padding-top: 30px;
     margin-bottom: 30px;
-    margin-top: 100px;
   }
 
   .main {
-    width: 60%;
-    padding-right: 25px;
-    padding-left: 50px;
+    width: calc(100% - 460px);
     margin-bottom: 40px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding-right: 0;
-      padding-left: 0;
     }
   }
 
   .aside {
-    width: 40%;
-    padding-right: 50px;
-    padding-left: 25px;
+    width: 410px;
     margin-bottom: 40px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding-right: 0;
-      padding-left: 0;
     }
   }
 }
@@ -41,14 +33,14 @@
   padding: 40px;
 
   @media screen and (max-width: 768px) {
-    padding: 10px;
+    padding: 30px 15px;
   }
 
-  & img { 
+  img { 
     width: 100%;
   }
 
-  & p {
+  p {
     margin: 40px 0;
   }
 
@@ -164,16 +156,16 @@
 }
 
 .more-info {
-  padding: 25px;
+  padding: 40px 25px;
   margin-bottom: 50px;
 
   @media screen and (max-width: 768px) {
-    padding: 15px;
+    padding: 30px 15px;
   }
 
   &__title {
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   &__direction_slider {
@@ -200,7 +192,8 @@
 
   &__direction-content {
     text-align: center;
-    padding: 15px;
+    padding: 20px 15px;
+    font-weight: 600;
   }
 
   &__service-content {
