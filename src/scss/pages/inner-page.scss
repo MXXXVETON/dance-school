@@ -1,4 +1,4 @@
-.main-wrapper {
+.container_with-aside {
   margin-right: -50px;
   margin-left: -50px;
   display: flex;
@@ -10,7 +10,7 @@
     margin-top: 100px;
   }
 
-  .wrapp {
+  .main {
     width: 60%;
     padding-right: 25px;
     padding-left: 50px;
@@ -23,7 +23,7 @@
     }
   }
 
-  .added-wrapp {
+  .aside {
     width: 40%;
     padding-right: 50px;
     padding-left: 25px;
@@ -35,19 +35,6 @@
       padding-left: 0;
     }
   }
-
-  .card {
-    background: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .wrapp,
-    .added-wrapp {
-      width: 100%;
-    }
-  }
 }
 
 .content {
@@ -57,33 +44,31 @@
     padding: 10px;
   }
 
-  p {
+  & img { 
+    width: 100%;
+  }
+
+  & p {
     margin: 40px 0;
   }
 
-  &__masterclass-img {
-    img {
-      width: 100%;
-    }
-  }
-
-  &__img {
+  &__imgs-group {
     display: flex;
 
-    div:first-child {
+    img {
+      width: calc(50% - 25px);
+
+      @media screen and (max-width: 768px) {
+        width: calc(50% - 10px);
+      }
+    }
+
+    img:first-child {
       margin-right: 50px;
 
       @media screen and (max-width: 768px) {
         margin-right: 10px;
       }
-    }
-
-    .foto-box {
-      width: 50%;
-    }
-
-    img {
-      width: 100%;
     }
   }
 
@@ -175,8 +160,6 @@
 
   .pagination {
     margin-bottom: 40px;
-    color: #C6C6C6;
-    font-size: 14px;
   }
 }
 
