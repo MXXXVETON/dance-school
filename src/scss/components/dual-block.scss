@@ -1,0 +1,56 @@
+.dual-block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+    
+    &_reverse-mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  & > .btn {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: inherit;
+      margin: 36px auto 0;
+    }
+  }
+
+  &__desc {
+    width: 40%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+
+      ul { 
+        align-items: baseline;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  &__media {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

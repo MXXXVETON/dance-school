@@ -44,11 +44,10 @@
                   </p>
   
                   <div class="content__video">
-                    <video controls></video>
-        
-                    <button class="video-launch video-play-button">
-                      <span></span>
-                    </button>
+                    @@include('video-block.html', {
+                      "videoId": "individualVideo",
+                      "poster": "./img/video-1.png"
+                    })
                   </div>
   
                   <p>

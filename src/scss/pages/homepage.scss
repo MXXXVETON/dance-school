@@ -47,48 +47,6 @@
   }
 }
 
-.individual-work {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 120px 0;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 768px) {
-    padding: 60px 0;
-  }
-
-  &__desc {
-    width: 40%;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-  }
-
-  &__video {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-    }
-
-    .video-play-button {
-      position: absolute;
-    }
-  }
-}
-
 .direction {
   margin-top: 150px;
   margin-bottom: 80px;
@@ -140,90 +98,6 @@
   }
 }
 
-.course-programm {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 120px 0;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
-    padding: 60px 0;
-  }
-
-  &__desc {
-    width: 40%;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
-
-      ul { 
-        align-items: baseline !important;
-      }
-    }
-  }
-
-  &__video {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-    }
-
-    .video-play-button {
-      position: absolute;
-    }
-  }
-
-  &__list {
-    margin-bottom: 15px;
-
-    span {
-      border-bottom: 1px dashed gray;
-    }
-  }
-
-  ul {
-    margin-bottom: 40px;
-
-    @media screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    li {
-      position: relative;
-      margin-bottom: 15px;
-      padding-left: 25px;
-      text-align: left;
-    
-      &::before {
-        position: absolute;
-        content: '';
-        background: #FFFFFF;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        border: 4px solid #57F1D8;
-        top: 4px;
-        left: 0;
-      }
-    }
-  }
-}
-
 .instagram-photo {
   text-align: center;
   margin-top: 150px;
@@ -264,43 +138,6 @@
   }
 }
 
-.online-lesson {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 120px 0;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 768px) {
-    padding: 60px 0;
-  }
-
-  &__desc {
-    width: 40%;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-  }
-
-  &__img {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
 .comments {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -336,9 +173,25 @@
       font-size: 18px;
       margin-bottom: 15px;
 
-      &:after {
-        content: url('../img/comments-vk.svg');
-        margin-left: 7px;
+      &_vk {
+        &:after {
+          content: url('../img/comments-vk.svg');
+          margin-left: 7px;
+        }
+      }
+
+      &_ig {
+        &:after {
+          content: url('../img/comments-ig.svg');
+          margin-left: 7px;
+        }
+      }
+
+      &_fb {
+        &:after {
+          content: url('../img/comments-fb.svg');
+          margin-left: 7px;
+        }
       }
     }
 
@@ -351,6 +204,7 @@
 
 .price {
   padding: 120px 0;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     padding: 60px 0;
@@ -384,12 +238,43 @@
   }
 }
 
+.abonements-toggler {
+  border: 2px solid #57F1D8;
+  border-radius: 6px;
+  padding: 5px;
+  display: inline-flex;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    button {
+      min-width: 50%;
+      letter-spacing: 0;
+      font-size: 13px;
+    }
+  }
+
+  button:not(.active) {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #57F1D8;
+  }
+}
+
 .abonements {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: -15px;
-  margin-right: -15px;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &__slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   
   &__card {
     width: 25%;
@@ -496,6 +381,15 @@
     flex-direction: column-reverse;
   }
 
+  & > .btn {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: inherit;
+      margin: 36px auto 0;
+    }
+  }
+
   &__desc {
     width: 40%;
 
@@ -503,6 +397,10 @@
       width: 100%;
       margin-bottom: 40px;
       text-align: center;
+
+      .btn {
+        display: none;
+      }
     }
   }
 

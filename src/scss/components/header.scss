@@ -4,10 +4,15 @@
   background-position: center;
   background-size: cover;
   height: calc(100vh - 64px);
+  min-height: 700px;
   display: flex;
   align-items: center;
   position: relative;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    min-height: 530px;
+  }
 
   .container {
     display: flex;
