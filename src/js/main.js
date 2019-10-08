@@ -1,4 +1,7 @@
 $(function() {
+  // gallery
+  baguetteBox.run('.baguette-gallery');
+
   // sliders
   initSlider('.benefit', 768)
   initSlider('.direction__content', 768)
@@ -8,6 +11,7 @@ $(function() {
   initSlider('.more-info__other-service_slider');
   abonementSliderInit('.individual-abonements-slider', '.individual-abonements-dots');
   abonementSliderInit('.groups-abonements-slider', '.groups-abonements-dots');
+  abonementSliderInit('.cources-abonements-slider', '.cources-abonements-dots');
 
   // slow scrolling to element by ancor link
   $(document).on('click', 'a[href^="#"]', function(e) {
@@ -32,6 +36,7 @@ $(function() {
 
     abonementSliderInit('.individual-abonements-slider', '.individual-abonements-dots');
     abonementSliderInit('.groups-abonements-slider', '.groups-abonements-dots');
+    abonementSliderInit('.cources-abonements-slider', '.cources-abonements-dots');
   })
 
   function abonementSliderInit(sliderSelector, dotsSelector) {
