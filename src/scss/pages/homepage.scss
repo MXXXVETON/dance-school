@@ -24,10 +24,6 @@
 
     @media screen and (max-width: 1140px) and (min-width: 768px) {
       width: 50%;
-
-      &:nth-of-type(4) {
-        display: none;
-      }
     }
 
     @media screen and (max-width: 768px) {
