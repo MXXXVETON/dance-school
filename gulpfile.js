@@ -16,16 +16,11 @@ const buildDirectory = './build/'
 
 const vendorsJs = [
   // vendors js paths
-  srcDirectory + '/vendors/jquery/jquery-3.3.1.min.js',
   srcDirectory + '/vendors/tooltipster/tooltipster.bundle.min.js',
-  srcDirectory + '/vendors/wow/wow.js',
-  srcDirectory + '/vendors/slick/slick.min.js',
 ]
 const vendorsCSS = [
   // vendors css paths
   srcDirectory + '/vendors/tooltipster/tooltipster.bundle.min.css',
-  srcDirectory + '/vendors/wow/animate.css',
-  srcDirectory + '/vendors/slick/slick.css',
 ]
 
 /** build html pages */

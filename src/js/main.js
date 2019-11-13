@@ -1,4 +1,9 @@
 $(function() {
+  // tooltips
+  $('.tooltip').tooltipster({
+    trigger: 'click',
+  });
+
   // gallery
   baguetteBox.run('.baguette-gallery');
 
